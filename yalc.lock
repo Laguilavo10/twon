@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "side-ui": {
+      "signature": "e9ff96120e19fc62aaa0bbcbb2b9fb8d",
+      "pure": true,
+      "replaced": "^0.1.28"
+    }
+  }
+}
