@@ -39,6 +39,11 @@ export interface TweetCardProps {
    * The number of views at the end of the count animation.
    */
   viewCount?: number;
+  
+  /**
+   * The number in milliseconds of speed the counter.
+   */
+  speedCount?: number;
 }
 
 export const TweetCard = ({
@@ -49,6 +54,7 @@ export const TweetCard = ({
   tweetText,
   isTypingAnimationEnabled = false,
   viewCount = 20,
+  speedCount = 25
 }: TweetCardProps) => {
   const classes = {
     container: cn(
@@ -107,7 +113,7 @@ export const TweetCard = ({
         </div>
         <div className="items max-[360px]:hidden flex items-center gap-2">
           <Icon icon={IconCatalog.twitterView} isSolid={true} className="w-4" />
-          <Counter start={0} end={viewCount} speed={25} />
+          <Counter start={0} end={viewCount} speed={speedCount} />
         </div>
       </div>
     </div>
